@@ -1,0 +1,17 @@
+<h1>This page shows lists in specific ToDos</h1>
+
+{{!-- <ul>
+{{#link-to "list"}}<li>List 1</li>{{/link-to}}
+{{#link-to "list"}}<li>List 2</li>{{/link-to}}
+ --}}
+{{#each model as |list|}}
+	{{#link-to "lists.list" list}}
+		<li>[{{list.id}}]Click to see list</li>
+	{{/link-to}}
+{{/each}}
+
+{{!-- </ul> --}}
+
+
+{{#link-to "todo"}}Go to previous page{{/link-to}}|
+{{#link-to "index"}}Go to home{{/link-to}}

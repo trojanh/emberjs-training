@@ -1,0 +1,15 @@
+<h1>This page displays the list of ToDos you've created</h1>
+
+
+<ul>
+{{#each model as |list|}}
+	{{#link-to "lists.list" list}}
+		<li>[{{list.id}}] <b>{{list.name}} </b>  <small>Click to see list</small></li>
+		{{outlet}}
+	{{/link-to}}
+{{/each}}
+</ul>
+
+
+{{!-- {{#link-to "index"}}Go to previous page{{/link-to}}|
+{{#link-to "index"}}Go to home{{/link-to}} --}}
